@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Traffic Light</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #222; color: #fff;
+         display: flex; flex-direction: column; align-items: center; padding-top: 40px; }
+  .light-box { background: #111; padding: 20px; border-radius: 20px; }
+  .light { width: 90px; height: 90px; border-radius: 50%; margin: 14px;
+           background: #333; transition: background 0.3s, box-shadow 0.3s; }
+  .light.red.on    { background: #ff3b30; box-shadow: 0 0 30px #ff3b30; }
+  .light.yellow.on { background: #ffcc00; box-shadow: 0 0 30px #ffcc00; }
+  .light.green.on  { background: #34c759; box-shadow: 0 0 30px #34c759; }
+  #status { margin: 20px 0 10px; font-size: 20px; }
+  button { padding: 10px 20px; border: none; border-radius: 8px;
+           cursor: pointer; font-weight: bold; }
+</style>
+</head>
+<body>
+<h2>Traffic Light</h2>
+<div class="light-box">
+  <div class="light red"></div>
+  <div class="light yellow"></div>
+  <div class="light green"></div>
+</div>
+<p id="status"></p>
+<button id="toggleBtn">Pause</button>
+
+<script src="script.js"></script>
+</body>
+</html>
